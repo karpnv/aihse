@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <div class="main-container">
+            <div id="message-container" class="messages-container">
+                <div class="box sb1">Привет, спроси меня о чем-нибудь</div>
+            </div>
+            <div class="input-container">
+                <input
+                    id="input-field"
+                    onkeyup="return enterPress(event)"
+                    placeholder="Задайте свой вопрос..."
+                >
+                <button class="send-message-btn" onclick="askQuestion()">Спросить</button>
+            </div>
+        </div>
+    </body>
+</html>
