@@ -1,0 +1,83 @@
+.message-container {
+    margin-bottom: 10%;  
+}
+
+.input-container {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+}
+
+#input-field {
+    font-size: 32px;
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.send-message-btn {
+    font-size: 32px;
+    position: absolute;
+    right: 10px;
+    width: 19%;
+    height: 100%;
+    background-color: #00bfb6;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.message-container {
+    overflow: scroll;
+    height: 80%;
+    margin: 50px;
+}
+
+.box {
+    width: 300px;
+    margin: 50px auto;
+    background: #00bfb6;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    font-family: arial;
+    position:relative;
+    border-radius: 10px;
+}
+
+/* .box:nth-child(even) {
+    float:left;
+    clear: left;
+}
+
+.box:nth-child(odd) {
+    float: right;
+    clear: right;
+} */
+
+.sb1:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #00bfb6;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    right: -19px;
+    top: 6px;
+}
+
+.sb2:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #00bfb6;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    left: -19px;
+    top: 6px;
+}
