@@ -1,8 +1,12 @@
 FROM python:3.6
 RUN apt-get update
 
+COPY requirements.txt /home/requirements.txt
+RUN pip install -r /home/requirements.txt
+
 WORKDIR /home
 COPY . /home
+
 RUN cd /home
 
 RUN git clone https://github.com/deepmipt/DeepPavlov.git
@@ -13,14 +17,6 @@ RUN cd /home/DeepPavlov
 
 RUN python setup.py develop
 
-WORKDIR /home
-RUN cd /home
-
-RUN pip install -r requirements.txt
-
-COPY . /home
-RUN cd /home
-
 WORKDIR /home/DeepPavlov
 RUN cd /home/DeepPavlov
 
@@ -30,4 +26,4 @@ RUN python -m deeppavlov download /home/DeepPavlov/deeppavlov/configs/seq2seq_go
 RUN pip install keras
 RUN pip install overrides
 
-ENTRYPOINT ["/bin/bash"]	
+CMD python -m deeppavlov riseapi /home/DeepPavlov/deeppavlov/configs/seq2seq_go_bot/bot_kvret_infer.json 

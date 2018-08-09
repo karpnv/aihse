@@ -1,3 +1,6 @@
+from flask import Flask
+from redis import Redis
+
 from deeppavlov.core.commands.infer import build_model_from_config
 from deeppavlov.core.common.file import read_json
 
@@ -8,3 +11,6 @@ utterance = ""
 while utterance != 'exit':
     print(">> " + model([utterance])[0])
     utterance = input(':: ')
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)

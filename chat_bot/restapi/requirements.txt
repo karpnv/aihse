@@ -1,0 +1,6 @@
+tqdm
+telebot
+flasgger
+download
+flask
+redis

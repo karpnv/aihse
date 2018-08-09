@@ -1,4 +1,3 @@
-
 from deeppavlov.core.agent import Agent, HighestConfidenceSelector
 from deeppavlov.skills.pattern_matching_skill import PatternMatchingSkill
 
@@ -12,3 +11,5 @@ for i in range(10):
     resp=HelloBot([var])[0]
     print('Bot response', resp)
 #print(HelloBot(['Hello!', 'Boo...', 'Bye.']))Q#"6{E
+
+
