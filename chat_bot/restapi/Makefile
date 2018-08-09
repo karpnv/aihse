@@ -10,9 +10,9 @@ PROD_IMAGE_NAME = restapi
 ########################################################################################################
 
 build_prod:
-	docker-compose build -d
+	docker-compose build 
 run_prod:
-	docker-compose up
+	docker-compose up -d
 stop_prod:
 	docker-compose stop	
 
