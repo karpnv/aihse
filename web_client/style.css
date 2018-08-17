@@ -1,5 +1,5 @@
 body {
-	background: #EFEFEF;
+		background: #EFEFEF;
 }
 
 h1 {
@@ -7,49 +7,50 @@ h1 {
 }
 
 ul {
-	padding: 0;
+		padding: 0;
 }
 
 li {
-	width: 100%;
-	position:relative;
-	list-style-type: none;
-	display: block;
+		width: 100%;
+		position:relative;
+		list-style-type: none;
+		display: block;
 }
 
 hr {
-	size: 18px;
-	color: #EFEFEF;
+		size: 18px;
+		color: #EFEFEF;
 }
 
 #message-container {
-	height:80%;
-	overflow: hidden;
-	overflow-y: auto;
+		height:80%;
+		overflow: hidden;
+		overflow-y: auto;
 }
 
 .main-container {
-	margin: 0 10%;
-	background: white;
-	box-shadow: 0 0 50px 5px rgba(0,0,0,0.5);
+		margin: 0 10%;
+		background: white;
+		box-shadow: 0 0 50px 5px rgba(0,0,0,0.5);
 }
 
 .input-container {
-	padding: 10px;
+		padding: 10px;
 }
 
 #input-field {
-	width: 90%;
+		width: 90%;
     font-size: 18px;
     border-radius: 5px;
 }
 
 .send-message-btn {
-	width: 10%;
-	float: right;
+		width: 10%;
+		float: right;
     font-size: 18px;
-    background-color: #00bfb6;
+    background-color: #959393;
     color: #fff;
+		border-color: #959393;
     border-radius: 5px;
 }
 
@@ -61,7 +62,7 @@ hr {
 
 .box {
     margin: 50px 19px;
-    background: #00bfb6;
+    background: #959393;
     padding: 20px;
     text-align: right;
     font-weight: 900;
@@ -72,8 +73,8 @@ hr {
 }
 
 .user-message {
-	text-align: left;
-	background: #00726E;
+		text-align: left;
+		background: #565555;
 }
 
 .sb1:before {
@@ -81,9 +82,9 @@ hr {
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 10px solid #00bfb6;
+    border-left: 10px solid #959393;
     border-right: 10px solid transparent;
-    border-top: 10px solid #00bfb6;
+    border-top: 10px solid #959393;
     border-bottom: 10px solid transparent;
     right: -19px;
     top: 6px;
@@ -95,8 +96,8 @@ hr {
     height: 0px;
     position: absolute;
     border-left: 10px solid transparent;
-    border-right: 10px solid #00726E;
-    border-top: 10px solid #00726E;
+    border-right: 10px solid #565555;
+    border-top: 10px solid #565555;
     border-bottom: 10px solid transparent;
     left: -19px;
     top: 6px;
