@@ -1,15 +1,20 @@
-<html>
+﻿<html>
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <script src="script.js"></script>
+	    <h1 class="header">AIHSE WEB CLIENT CHAT BOT</h1>
         <div class="main-container">
-            <div id="message-container" class="messages-container">
-                <div class="box sb1">Привет, спроси меня о чем-нибудь</div>
-            </div>
+			<ul id="message-container">
+				<li>
+					<div class="box sb1">Привет, спроси меня о чем-нибудь</div>
+				</li>
+			</ul>
+			<hr>
             <div class="input-container">
                 <input
+					autofocus
                     id="input-field"
                     onkeyup="return enterPress(event)"
                     placeholder="Задайте свой вопрос..."
