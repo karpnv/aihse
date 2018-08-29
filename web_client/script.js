@@ -1,6 +1,5 @@
 const URL = 'https://7012.lnsigo.mipt.ru/answer';
 
-
 askQuestion = () => {
     let response;
     const input = document.getElementById('input-field');
@@ -9,26 +8,31 @@ askQuestion = () => {
     if (input.value === '')
         return;
 
-    const newMessage = document.createElement('div');
-
-    newMessage.classList.add('box');
-    newMessage.classList.add('sb2');
-    newMessage.innerHTML=input.value;
-
-    const responseMessage = document.createElement('div');
     const xhr = new XMLHttpRequest();
     xhr.open("POST", URL, false);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             response = JSON.parse(xhr.responseText);
+			
+			const messageWrapper = document.createElement('li');
+			const newMessage = document.createElement('div');
 
+			newMessage.classList.add('box');
+			newMessage.classList.add('sb2');
+			newMessage.classList.add('user-message');
+			newMessage.innerHTML=input.value;
+			messageWrapper.appendChild(newMessage);
+			messageContainer.appendChild(messageWrapper);
+
+			const responseWrapper = document.createElement('li');
+			const responseMessage = document.createElement('div');
             responseMessage.classList.add('box');
             responseMessage.classList.add('sb1');
             responseMessage.innerHTML=response;
 
-            messageContainer.appendChild(newMessage);
-            messageContainer.appendChild(responseMessage);
+			responseWrapper.appendChild(responseMessage);
+			messageContainer.appendChild(responseWrapper);
 
             input.value = '';
             input.focus();
@@ -36,11 +40,11 @@ askQuestion = () => {
             return;
         }
 
-        alert('Что-то пошло не так');
-
     };
     var data = JSON.stringify({"text1": input.value});
     xhr.send(data);
+	
+	messageContainer.scrollTop = messageContainer.scrollHeight;
 };
 
 enterPress = (event) => {
@@ -49,4 +53,20 @@ enterPress = (event) => {
     }
 
     return;
-}
+};
+
+scrollToTop = () => {
+	const messageContainer = document.getElementById('message-container');
+	const scrollButton = document.getElementById('scroll-top-btn');
+	
+	messageContainer.scrollTop = 0;
+	scrollButton.style.display = 'none';
+};
+
+clearHistory = () => {
+	const messageContainer = document.getElementById('message-container');
+	const scrollButton = document.getElementById('scroll-top-btn');
+	
+	messageContainer.innerHTML = "";
+	scrollButton.style.display = 'none';
+};

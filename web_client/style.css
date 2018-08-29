@@ -1,29 +1,56 @@
-.message-container {
-    margin-bottom: 10%;  
+body {
+		background: #EFEFEF;
+}
+
+h1 {
+    text-align:center;
+}
+
+ul {
+		padding: 0;
+}
+
+li {
+		width: 100%;
+		position:relative;
+		list-style-type: none;
+		display: block;
+}
+
+hr {
+		size: 18px;
+		color: #EFEFEF;
+}
+
+#message-container {
+		height:80%;
+		overflow: hidden;
+		overflow-y: auto;
+}
+
+.main-container {
+		margin: 0 10%;
+		background: white;
+		box-shadow: 0 0 50px 5px rgba(0,0,0,0.5);
 }
 
 .input-container {
-    width: 100%;
-    height: 10%;
-    position: fixed;
-    bottom: 0;
+		padding: 10px;
 }
 
 #input-field {
-    font-size: 32px;
-    width: 80%;
-    height: 100%;
+		width: 90%;
+    font-size: 18px;
     border-radius: 5px;
 }
 
 .send-message-btn {
-    font-size: 32px;
-    position: absolute;
-    right: 10px;
-    width: 19%;
-    height: 100%;
-    background-color: #00bfb6;
+		width: 10%;
+		float: right;
+    font-size: 18px;
+    background-color: #959393;
     color: #fff;
+		border-color: #959393;
     border-radius: 5px;
 }
 
@@ -34,11 +61,10 @@
 }
 
 .box {
-    width: 300px;
-    margin: 50px auto;
-    background: #00bfb6;
+    margin: 50px 19px;
+    background: #959393;
     padding: 20px;
-    text-align: center;
+    text-align: right;
     font-weight: 900;
     color: #fff;
     font-family: arial;
@@ -46,24 +72,19 @@
     border-radius: 10px;
 }
 
-/* .box:nth-child(even) {
-    float:left;
-    clear: left;
+.user-message {
+		text-align: left;
+		background: #565555;
 }
-
-.box:nth-child(odd) {
-    float: right;
-    clear: right;
-} */
 
 .sb1:before {
     content: "";
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 10px solid #00bfb6;
+    border-left: 10px solid #959393;
     border-right: 10px solid transparent;
-    border-top: 10px solid #00bfb6;
+    border-top: 10px solid #959393;
     border-bottom: 10px solid transparent;
     right: -19px;
     top: 6px;
@@ -75,8 +96,8 @@
     height: 0px;
     position: absolute;
     border-left: 10px solid transparent;
-    border-right: 10px solid #00bfb6;
-    border-top: 10px solid #00bfb6;
+    border-right: 10px solid #565555;
+    border-top: 10px solid #565555;
     border-bottom: 10px solid transparent;
     left: -19px;
     top: 6px;
