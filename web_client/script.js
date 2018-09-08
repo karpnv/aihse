@@ -1,4 +1,4 @@
-const URL = 'https://7012.lnsigo.mipt.ru/answer';
+const URL = 'http://172.17.190.7:5001/go-bot';
 
 askQuestion = () => {
     let response;
@@ -41,7 +41,7 @@ askQuestion = () => {
         }
 
     };
-    var data = JSON.stringify({"text1": input.value});
+    var data = JSON.stringify({"context": [input.value]});
     xhr.send(data);
 	
 	messageContainer.scrollTop = messageContainer.scrollHeight;
