@@ -12,7 +12,8 @@ def first_page():
 @app.route('/', methods=['POST'])
 def post_request():
     context = request.get_json(force=True)
-    resp="""["%s"]""" %context
+    
+    resp="""["%s"]""" %"Hey"
     return resp
 
 if __name__ == "__main__":
